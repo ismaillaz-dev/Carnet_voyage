@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Carnets">
+<title>Carnets de voyage</title>
+<link rel="apple-touch-icon" href="data:image/png;base64,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ECIAAAAg5M3oAwBwhg8f344+AgBTcAMAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAg5P8BvX8A+chyUBgAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" href="data:image/png;base64,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ECIAAAAg5M3oAwBwhg8f344+AgBTcAMAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAgRAAAAECIAAAAgBABAAAAIQIAAABCBAAAAIQIAAAACBEAAAAQIgAAACBEAAAAQIgAAACAEAEAAAAhAgAAAEIEAAAAhAgAAAAIEQAAABAiAAAAIEQAAABAiAAAAIAQAQAAACECAAAAQgQAAACECAAAAAgRAAAAECIAAAAg5P8BvX8A+chyUBgAAAAASUVORK5CYII=">
+<meta name="theme-color" content="#33473C">
+<style>
+:root{
+  --paper:#ECE6D6;
+  --paper-2:#E4DCC8;
+  --paper-deep:#DCD2B8;
+  --ink:#262620;
+  --ink-soft:#5B594C;
+  --ink-faint:#9A9583;
+  --gold:#97762E;
+  --forest:#33473C;
+  --forest-soft:#4A6355;
+  --line:rgba(38,38,32,0.14);
+  --shadow-spine: rgba(0,0,0,0.22);
+  --serif: "New York", ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  --mono: "SF Mono", ui-monospace, Menlo, monospace;
+}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+html,body{height:100%;}
+body{
+  margin:0;
+  background:var(--paper-deep);
+  color:var(--ink);
+  font-family:var(--sans);
+  overflow-x:hidden;
+  -webkit-user-select:none;
+  user-select:none;
+}
+input,textarea{-webkit-user-select:text; user-select:text;}
+button{font-family:var(--sans); -webkit-user-select:none; user-select:none;}
+
+/* ---------- App chrome ---------- */
+#app{min-height:100vh; display:flex; flex-direction:column;}
+
+.topbar{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 20px; background:var(--paper-deep);
+  border-bottom:1px solid var(--line);
+  position:sticky; top:0; z-index:20;
+}
+.topbar h1{
+  font-family:var(--serif); font-weight:600; font-size:20px; margin:0; letter-spacing:0.2px;
+}
+.topbar .back{
+  font-family:var(--mono); font-size:12px; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--ink-soft); background:none; border:none; padding:8px 4px; cursor:pointer;
+  display:flex; align-items:center; gap:6px;
+}
+.topbar .back:active{opacity:0.5;}
+.btn{
+  font-family:var(--mono); font-size:12px; letter-spacing:0.06em; text-transform:uppercase;
+  border:1px solid var(--ink); background:var(--ink); color:var(--paper);
+  padding:10px 16px; border-radius:2px; cursor:pointer;
+}
+.btn:active{opacity:0.7;}
+.btn.ghost{background:none; color:var(--ink); border:1px solid var(--ink);}
+.btn.forest{background:var(--forest); border-color:var(--forest); color:var(--paper);}
+.btn.small{padding:6px 10px; font-size:11px;}
+.btn.danger{background:none; color:#7a3030; border:1px solid #7a3030;}
+
+/* ---------- Library ---------- */
+.library{padding:28px 20px 80px; max-width:1100px; margin:0 auto; width:100%;}
+.library-head{margin-bottom:22px;}
+.library-head .eyebrow{
+  font-family:var(--mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--gold); margin:0 0 6px;
+}
+.library-head h1{font-family:var(--serif); font-size:34px; margin:0; font-weight:600;}
+.grid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:22px; margin-top:28px;
+}
+.card{
+  background:var(--paper); border:1px solid var(--line); cursor:pointer;
+  display:flex; flex-direction:column; overflow:hidden; position:relative;
+  box-shadow:0 1px 2px rgba(0,0,0,0.06);
+}
+.card:active{opacity:0.85;}
+.card .thumb{
+  aspect-ratio:3/4; background:var(--paper-2) center/cover no-repeat; position:relative;
+  display:flex; align-items:flex-end;
+}
+.card .thumb.empty::after{
+  content:"—"; margin:auto; color:var(--ink-faint); font-family:var(--serif); font-size:28px;
+}
+.card .info{padding:12px 14px 14px;}
+.card .info .title{font-family:var(--serif); font-size:16px; font-weight:600; line-height:1.25;}
+.card .info .meta{font-family:var(--mono); font-size:10px; color:var(--ink-soft); margin-top:5px; letter-spacing:0.04em;}
+.card .del{
+  position:absolute; top:8px; right:8px; width:26px; height:26px; border-radius:50%;
+  background:rgba(38,38,32,0.55); color:#fff; border:none; font-size:14px; line-height:1;
+  display:flex; align-items:center; justify-content:center; cursor:pointer;
+}
+.new-card{
+  border:1px dashed var(--ink-faint); display:flex; align-items:center; justify-content:center;
+  min-height:220px; cursor:pointer; flex-direction:column; gap:8px; color:var(--ink-soft);
+}
+.new-card .plus{font-family:var(--serif); font-size:34px; color:var(--gold); line-height:1;}
+.new-card span{font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase;}
+.empty-state{
+  text-align:center; padding:60px 20px; color:var(--ink-soft); font-family:var(--serif); font-size:18px;
+}
+
+/* ---------- Editor shell ---------- */
+.tabs{
+  display:flex; gap:2px; padding:0 20px; background:var(--paper-deep); border-bottom:1px solid var(--line);
+  overflow-x:auto; position:sticky; top:57px; z-index:19;
+}
+.tab{
+  font-family:var(--mono); font-size:11px; letter-spacing:0.07em; text-transform:uppercase;
+  padding:12px 14px; background:none; border:none; color:var(--ink-soft); cursor:pointer; white-space:nowrap;
+  border-bottom:2px solid transparent;
+}
+.tab.active{color:var(--ink); border-bottom-color:var(--gold);}
+.tab-body{flex:1; padding:26px 20px 90px; max-width:760px; margin:0 auto; width:100%;}
+
+.field{margin-bottom:22px;}
+.field label{
+  display:block; font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--ink-soft); margin-bottom:8px;
+}
+.field input[type=text], .field textarea{
+  width:100%; border:1px solid var(--line); background:var(--paper); padding:12px 14px;
+  font-family:var(--serif); font-size:16px; color:var(--ink); border-radius:2px;
+}
+.field textarea{min-height:160px; resize:vertical; line-height:1.6;}
+.field input[type=text]:focus, .field textarea:focus{outline:none; border-color:var(--gold);}
+
+.image-picker{
+  border:1px solid var(--line); background:var(--paper); aspect-ratio:4/3; position:relative;
+  display:flex; align-items:center; justify-content:center; overflow:hidden; cursor:pointer;
+}
+.image-picker img{width:100%; height:100%; object-fit:cover;}
+.image-picker .hint{font-family:var(--mono); font-size:11px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.06em; text-align:center; padding:0 20px;}
+.image-picker input[type=file]{position:absolute; inset:0; opacity:0; cursor:pointer;}
+.image-picker .swap{
+  position:absolute; bottom:8px; right:8px; background:rgba(38,38,32,0.65); color:#fff;
+  font-family:var(--mono); font-size:10px; padding:6px 10px; letter-spacing:0.06em; text-transform:uppercase;
+  pointer-events:none;
+}
+
+/* pages list */
+.page-row{
+  display:flex; align-items:center; gap:12px; padding:12px 14px; background:var(--paper);
+  border:1px solid var(--line); margin-bottom:8px; cursor:pointer;
+}
+.page-row .num{font-family:var(--mono); font-size:11px; color:var(--gold); width:22px; flex-shrink:0;}
+.page-row .thumb-sm{width:44px; height:44px; background:var(--paper-2) center/cover no-repeat; flex-shrink:0;}
+.page-row .lbl{flex:1; font-family:var(--serif); font-size:15px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.page-row .ops{display:flex; gap:4px; flex-shrink:0;}
+.iconbtn{
+  width:30px; height:30px; border:1px solid var(--line); background:var(--paper); color:var(--ink-soft);
+  font-size:13px; cursor:pointer; display:flex; align-items:center; justify-content:center;
+}
+.iconbtn:active{opacity:0.6;}
+.add-page-btn{width:100%; padding:16px; border:1px dashed var(--ink-faint); background:none; color:var(--ink-soft);
+  font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; margin-top:6px;}
+
+.fab-bar{
+  position:fixed; bottom:0; left:0; right:0; padding:14px 20px calc(14px + env(safe-area-inset-bottom));
+  background:linear-gradient(180deg, rgba(220,210,184,0) 0%, var(--paper-deep) 40%);
+  display:flex; gap:10px; justify-content:center; z-index:18;
+}
+
+/* ---------- Page editor (single page detail) ---------- */
+.page-editor-overlay{
+  position:fixed; inset:0; background:var(--paper-deep); z-index:40; display:flex; flex-direction:column;
+}
+
+/* ---------- Spread viewer ---------- */
+.viewer{
+  position:fixed; inset:0; background:#161510; z-index:50; display:flex; flex-direction:column; align-items:center; justify-content:center;
+}
+.viewer .close-viewer{
+  position:absolute; top:16px; right:16px; z-index:5; background:rgba(255,255,255,0.1); color:#ECE6D6;
+  border:none; width:36px; height:36px; border-radius:50%; font-size:16px; cursor:pointer;
+}
+.viewer .vnav{
+  position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.08); color:#ECE6D6;
+  border:none; width:44px; height:64px; font-size:20px; cursor:pointer; z-index:5;
+}
+.viewer .vnav.prev{left:8px; border-radius:0 6px 6px 0;}
+.viewer .vnav.next{right:8px; border-radius:6px 0 0 6px;}
+.viewer .vnav[disabled]{opacity:0.15; pointer-events:none;}
+.viewer .counter{
+  position:absolute; bottom:14px; left:50%; transform:translateX(-50%); font-family:var(--mono);
+  font-size:11px; color:#B9B29A; letter-spacing:0.08em;
+}
+.rotate-hint{
+  color:#ECE6D6; font-family:var(--serif); font-size:18px; text-align:center; padding:40px; max-width:280px;
+}
+
+.spread{
+  width:min(94vw, 1180px);
+  aspect-ratio:420/297;
+  background:var(--paper);
+  display:flex;
+  box-shadow:0 20px 60px rgba(0,0,0,0.5);
+  position:relative;
+}
+.spread .page{
+  flex:1; position:relative; padding:5.5% 6%; display:flex; flex-direction:column; overflow:hidden;
+}
+.spread .page.left{background:var(--paper-2);}
+.spread .page.right{background:var(--paper);}
+.spread::after{
+  content:""; position:absolute; top:0; bottom:0; left:50%; width:22px; margin-left:-11px;
+  background:linear-gradient(90deg, rgba(0,0,0,0) 0%, var(--shadow-spine) 50%, rgba(0,0,0,0) 100%);
+  opacity:0.5; pointer-events:none;
+}
+.folio{
+  position:absolute; bottom:5%; font-family:var(--mono); font-size:10px; letter-spacing:0.1em; color:var(--ink-faint);
+}
+.page.left .folio{left:6%;}
+.page.right .folio{right:6%;}
+
+.spread-cover .page.left{background:var(--paper-2) center/cover no-repeat;}
+.spread-cover .page.left.has-img{background-color:var(--ink);}
+.spread-cover .page.right{align-items:center; justify-content:center; text-align:center;}
+.spread-cover .eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;}
+.spread-cover .cover-title{font-family:var(--serif); font-size:clamp(22px,3.4vw,40px); font-weight:600; line-height:1.15;}
+.spread-cover .rule{width:40px; height:1px; background:var(--ink-faint); margin:18px auto;}
+
+.spread-intro .page.left{
+  display:flex; align-items:center; justify-content:center;
+}
+.spread-intro .page.left .quote-mark{font-family:var(--serif); font-size:min(18vw,140px); color:var(--paper-deep); line-height:1;}
+.spread-intro .page.right{justify-content:center;}
+.spread-intro h2, .content-h2{
+  font-family:var(--mono); font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold); margin:0 0 14px;
+}
+.spread-intro .intro-text, .page-text{
+  font-family:var(--serif); font-size:clamp(13px,1.5vw,17px); line-height:1.75; color:var(--ink);
+  white-space:pre-wrap; overflow-y:auto; padding-right:4px;
+}
+
+.spread-page .page.left{background-size:cover; background-position:center; background-repeat:no-repeat;}
+.spread-page .page.left.no-img{display:flex; align-items:center; justify-content:center;}
+.spread-page .page.left.no-img::after{content:"—"; font-family:var(--serif); color:var(--ink-faint); font-size:30px;}
+.spread-page .page.right{justify-content:flex-start;}
+.spread-page .page-title{font-family:var(--serif); font-size:clamp(16px,2vw,22px); font-weight:600; margin:0 0 12px;}
+
+@media (max-width:680px) and (orientation:portrait){
+  .spread{display:none;}
+  .rotate-hint{display:flex; flex-direction:column; align-items:center; gap:14px;}
+}
+.rotate-hint{display:none;}
+@media (max-width:680px) and (orientation:portrait){
+  .rotate-hint{display:flex;}
+}
+
+/* ---------- Overview (drag reorder list) ---------- */
+.ov-row{
+  display:flex; align-items:center; gap:12px; padding:14px; background:var(--paper); border:1px solid var(--line); margin-bottom:8px;
+}
+.ov-row .kind{font-family:var(--mono); font-size:9px; text-transform:uppercase; letter-spacing:0.08em; color:var(--gold); width:52px; flex-shrink:0;}
+.ov-row .lbl{flex:1; font-family:var(--serif); font-size:15px;}
+.ov-row.fixed{opacity:0.6;}
+
+/* ---------- Print ---------- */
+#print-root{display:none;}
+@media print{
+  @page{ size: A4 landscape; margin:0; }
+  body *{visibility:hidden;}
+  #print-root, #print-root *{visibility:visible;}
+  #print-root{
+    display:block !important; position:absolute; top:0; left:0; width:100%;
+  }
+  #print-root .pspread{
+    width:297mm; height:210mm; display:flex; page-break-after:always; background:var(--paper);
+  }
+  #print-root .pspread:last-child{page-break-after:auto;}
+  #print-root .page{flex:1; position:relative; padding:14mm 16mm; overflow:hidden;}
+  #print-root .page.left{background:var(--paper-2);}
+  #print-root .page.left.img{background-size:cover; background-position:center;}
+  #print-root .cover-title{font-family:var(--serif); font-size:30pt; text-align:center; margin:auto;}
+  #print-root .eyebrow{font-family:var(--mono); font-size:9pt; letter-spacing:0.14em; text-align:center; color:var(--gold); text-transform:uppercase;}
+  #print-root .page-title{font-family:var(--serif); font-size:16pt; font-weight:600; margin:0 0 8pt;}
+  #print-root .page-text, #print-root .intro-text{font-family:var(--serif); font-size:11pt; line-height:1.7; white-space:pre-wrap;}
+  #print-root .cover-wrap{display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;}
+  #print-root .folio{position:absolute; bottom:8mm; font-family:var(--mono); font-size:8pt; color:var(--ink-faint);}
+  #print-root .page.right .folio{right:16mm;}
+  #print-root .page.left .folio{left:16mm;}
+}
+
+.spinner-overlay{
+  position:fixed; inset:0; background:var(--paper-deep); z-index:100; display:flex; align-items:center; justify-content:center;
+  font-family:var(--mono); font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft);
+}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="print-root"></div>
+
+<script>
+(function(){
+"use strict";
+
+/* ============ STATE ============ */
+let INDEX = [];              // [{id,title,updatedAt,coverImage}]
+let CURRENT = null;          // full carnet object being edited
+let VIEW = 'loading';        // 'library' | 'editor'
+let EDITOR_TAB = 'cover';    // 'cover' | 'intro' | 'pages' | 'overview'
+let EDITING_PAGE_ID = null;
+let VIEWER_OPEN = false;
+let VIEWER_INDEX = 0;        // 0=cover,1=intro,2+=pages[n-2]
+let BUSY = false;
+
+const root = document.getElementById('app');
+const printRoot = document.getElementById('print-root');
+
+/* ============ STORAGE HELPERS ============
+   Uses IndexedDB directly: this is the browser's own persistent storage,
+   works fully offline, and keeps working once the app is saved to the
+   home screen (no dependency on any Claude-specific API).
+   Architecture: each carnet is split across several small keys so no single
+   write is ever huge:
+     - 'library-index'        -> [{id,title,updatedAt,coverThumb}]  (small thumbnails only)
+     - 'carnet:{id}'          -> {id,coverTitle,coverImage,coverThumb,intro,pageOrder:[ids],createdAt,updatedAt}
+     - 'page:{carnetId}:{id}' -> {id,label,image,text}
+*/
+class StorageError extends Error{}
+
+const DB_NAME = 'carnet-voyage-db';
+const STORE = 'kv';
+let dbPromise = null;
+
+function openDB(){
+  if(dbPromise) return dbPromise;
+  dbPromise = new Promise((resolve, reject) => {
+    if(!window.indexedDB){ reject(new Error('IndexedDB indisponible')); return; }
+    const req = indexedDB.open(DB_NAME, 1);
+    req.onupgradeneeded = (e) => {
+      const db = e.target.result;
+      if(!db.objectStoreNames.contains(STORE)) db.createObjectStore(STORE);
+    };
+    req.onsuccess = () => resolve(req.result);
+    req.onerror = () => reject(req.error);
+  });
+  return dbPromise;
+}
+
+async function storageGet(key){
+  try{
+    const db = await openDB();
+    return await new Promise((resolve, reject) => {
+      const tx = db.transaction(STORE, 'readonly');
+      const req = tx.objectStore(STORE).get(key);
+      req.onsuccess = () => resolve(req.result === undefined ? null : req.result);
+      req.onerror = () => reject(req.error);
+    });
+  }catch(e){ console.error('storage get failed for', key, e); return null; }
+}
+async function storageSet(key, value){
+  try{
+    const db = await openDB();
+    await new Promise((resolve, reject) => {
+      const tx = db.transaction(STORE, 'readwrite');
+      tx.objectStore(STORE).put(value, key);
+      tx.oncomplete = () => resolve(true);
+      tx.onerror = () => reject(tx.error);
+    });
+    return true;
+  }catch(e){
+    console.error('storage set failed for', key, e);
+    throw new StorageError("L'enregistrement a échoué. Réessayez, ou avec une photo plus légère si le problème persiste.");
+  }
+}
+async function storageDelete(key){
+  try{
+    const db = await openDB();
+    await new Promise((resolve, reject) => {
+      const tx = db.transaction(STORE, 'readwrite');
+      tx.objectStore(STORE).delete(key);
+      tx.oncomplete = () => resolve(true);
+      tx.onerror = () => reject(tx.error);
+    });
+  }catch(e){ /* key may not exist, ignore */ }
+}
+
+async function loadIndex(){
+  const idx = await storageGet('library-index');
+  INDEX = idx || [];
+}
+async function saveIndex(){
+  await storageSet('library-index', INDEX);
+}
+
+async function loadCarnetMeta(id){
+  return await storageGet('carnet:' + id);
+}
+async function saveCarnetMeta(meta){
+  meta.updatedAt = Date.now();
+  await storageSet('carnet:' + meta.id, meta);
+  const i = INDEX.findIndex(x => x.id === meta.id);
+  const summary = {id:meta.id, title:meta.coverTitle || 'Sans titre', updatedAt:meta.updatedAt, coverThumb:meta.coverThumb || null};
+  if(i >= 0) INDEX[i] = summary; else INDEX.unshift(summary);
+  await saveIndex();
+}
+function metaFromCurrent(){
+  return {
+    id: CURRENT.id,
+    coverTitle: CURRENT.coverTitle,
+    coverImage: CURRENT.coverImage,
+    coverThumb: CURRENT.coverThumb,
+    intro: CURRENT.intro,
+    pageOrder: CURRENT.pages.map(p => p.id),
+    createdAt: CURRENT.createdAt
+  };
+}
+async function persistMeta(){
+  await saveCarnetMeta(metaFromCurrent());
+}
+
+async function loadPage(carnetId, pageId){
+  return await storageGet('page:' + carnetId + ':' + pageId);
+}
+async function savePageData(carnetId, page){
+  await storageSet('page:' + carnetId + ':' + page.id, page);
+}
+async function deletePageData(carnetId, pageId){
+  await storageDelete('page:' + carnetId + ':' + pageId);
+}
+
+async function deleteCarnetById(id){
+  const meta = await loadCarnetMeta(id);
+  if(meta && meta.pageOrder){
+    for(const pid of meta.pageOrder) await deletePageData(id, pid);
+  }
+  await storageDelete('carnet:' + id);
+  INDEX = INDEX.filter(x => x.id !== id);
+  await saveIndex();
+}
+
+function uid(){ return Date.now().toString(36) + Math.random().toString(36).slice(2,8); }
+
+/* ============ IMAGE HANDLING ============ */
+function loadImageFromFile(file){
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error('read failed'));
+    reader.onload = () => {
+      const img = new Image();
+      img.onerror = () => reject(new Error('decode failed'));
+      img.onload = () => resolve(img);
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
+function compressImage(img, maxDim, quality){
+  let w = img.width, h = img.height;
+  const scale = Math.min(1, maxDim / Math.max(w,h));
+  w = Math.max(1, Math.round(w*scale));
+  h = Math.max(1, Math.round(h*scale));
+  const canvas = document.createElement('canvas');
+  canvas.width = w; canvas.height = h;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0, w, h);
+  return canvas.toDataURL('image/jpeg', quality);
+}
+// Full-size version used in the book spread / PDF, kept modest to stay well under storage limits.
+async function readForContent(file){
+  const img = await loadImageFromFile(file);
+  return compressImage(img, 1280, 0.7);
+}
+// Pair of (full, thumb) used for the cover, since the thumb also lives inside the shared library index.
+async function readForCover(file){
+  const img = await loadImageFromFile(file);
+  return {
+    full: compressImage(img, 1280, 0.7),
+    thumb: compressImage(img, 320, 0.6)
+  };
+}
+function showError(msg){
+  alert(msg);
+}
+
+/* ============ RENDER DISPATCH ============ */
+function render(){
+  if(VIEW === 'loading'){ renderLoading(); return; }
+  if(VIEW === 'library'){ renderLibrary(); return; }
+  if(VIEW === 'editor'){ renderEditor(); return; }
+}
+
+function renderLoading(){
+  root.innerHTML = `<div class="spinner-overlay">Chargement…</div>`;
+}
+
+/* ============ LIBRARY VIEW ============ */
+function renderLibrary(){
+  const cards = INDEX
+    .slice()
+    .sort((a,b) => b.updatedAt - a.updatedAt)
+    .map(c => `
+      <div class="card" data-open="${c.id}">
+        <div class="thumb ${c.coverThumb ? '' : 'empty'}" style="${c.coverThumb ? `background-image:url('${c.coverThumb}')` : ''}"></div>
+        <div class="info">
+          <div class="title">${escapeHtml(c.title || 'Sans titre')}</div>
+          <div class="meta">${formatDate(c.updatedAt)}</div>
+        </div>
+        <button class="del" data-del="${c.id}" title="Supprimer">✕</button>
+      </div>
+    `).join('');
+
+  root.innerHTML = `
+    <div class="topbar">
+      <h1>Carnets de voyage</h1>
+      <button class="btn" id="btn-new">+ Nouveau</button>
+    </div>
+    <div class="library">
+      ${INDEX.length === 0 ? `
+        <div class="empty-state">Aucun carnet pour l'instant.<br>Créez votre premier carnet de voyage.</div>
+      ` : ''}
+      <div class="grid">
+        ${cards}
+        <div class="new-card" id="new-card"><div class="plus">+</div><span>Nouveau carnet</span></div>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('btn-new').onclick = createNewCarnet;
+  document.getElementById('new-card').onclick = createNewCarnet;
+  root.querySelectorAll('[data-open]').forEach(el => {
+    el.onclick = (e) => {
+      if(e.target.closest('[data-del]')) return;
+      openCarnet(el.getAttribute('data-open'));
+    };
+  });
+  root.querySelectorAll('[data-del]').forEach(el => {
+    el.onclick = async (e) => {
+      e.stopPropagation();
+      const id = el.getAttribute('data-del');
+      const c = INDEX.find(x => x.id === id);
+      if(confirm(`Supprimer « ${c ? c.title : 'ce carnet'} » ? Cette action est définitive.`)){
+        await deleteCarnetById(id);
+        render();
+      }
+    };
+  });
+}
+
+async function createNewCarnet(){
+  CURRENT = {
+    id: uid(),
+    coverTitle: '',
+    coverImage: null,
+    coverThumb: null,
+    intro: '',
+    pages: [],
+    createdAt: Date.now()
+  };
+  try{
+    await persistMeta();
+  }catch(e){ showError(e.message); return; }
+  VIEW = 'editor';
+  EDITOR_TAB = 'cover';
+  render();
+}
+
+async function openCarnet(id){
+  setBusy(true, 'Ouverture du carnet…');
+  try{
+    const meta = await loadCarnetMeta(id);
+    if(!meta) return;
+    const order = meta.pageOrder || [];
+    const pages = [];
+    for(const pid of order){
+      const p = await loadPage(id, pid);
+      if(p) pages.push(p);
+    }
+    CURRENT = {...meta, pages};
+    VIEW = 'editor';
+    EDITOR_TAB = 'cover';
+    render();
+  } finally { setBusy(false); }
+}
+
+/* ============ EDITOR VIEW ============ */
+function renderEditor(){
+  const tabs = [
+    ['cover','Couverture'],
+    ['intro','Introduction'],
+    ['pages','Pages'],
+    ['overview',"Vue d'ensemble"]
+  ];
+
+  root.innerHTML = `
+    <div class="topbar">
+      <button class="back" id="btn-back">← Bibliothèque</button>
+      <button class="btn ghost small" id="btn-preview">Aperçu du livre</button>
+    </div>
+    <div class="tabs">
+      ${tabs.map(([k,l]) => `<button class="tab ${EDITOR_TAB===k?'active':''}" data-tab="${k}">${l}</button>`).join('')}
+    </div>
+    <div class="tab-body" id="tab-body"></div>
+    <div class="fab-bar">
+      <button class="btn forest" id="btn-export">Exporter en PDF</button>
+    </div>
+  `;
+
+  document.getElementById('btn-back').onclick = async () => {
+    VIEW = 'library';
+    await loadIndex();
+    render();
+  };
+  document.getElementById('btn-preview').onclick = () => openViewer(0);
+  document.getElementById('btn-export').onclick = exportPdf;
+  root.querySelectorAll('[data-tab]').forEach(el => {
+    el.onclick = () => { EDITOR_TAB = el.getAttribute('data-tab'); render(); };
+  });
+
+  const body = document.getElementById('tab-body');
+  if(EDITOR_TAB === 'cover') renderCoverTab(body);
+  else if(EDITOR_TAB === 'intro') renderIntroTab(body);
+  else if(EDITOR_TAB === 'pages') renderPagesTab(body);
+  else if(EDITOR_TAB === 'overview') renderOverviewTab(body);
+}
+
+function renderCoverTab(body){
+  body.innerHTML = `
+    <div class="field">
+      <label>Titre du carnet</label>
+      <input type="text" id="cover-title" value="${escapeAttr(CURRENT.coverTitle || '')}" placeholder="Un été en Islande">
+    </div>
+    <div class="field">
+      <label>Image de couverture</label>
+      <div class="image-picker" id="cover-pick">
+        ${CURRENT.coverImage ? `<img src="${CURRENT.coverImage}">` : `<div class="hint">Touchez pour choisir une photo</div>`}
+        <input type="file" accept="image/*" id="cover-file">
+        ${CURRENT.coverImage ? `<div class="swap">Changer</div>` : ''}
+      </div>
+    </div>
+  `;
+  const titleInput = document.getElementById('cover-title');
+  titleInput.oninput = debounce(async () => {
+    CURRENT.coverTitle = titleInput.value;
+    try{ await persistMeta(); }catch(e){ showError(e.message); }
+  }, 400);
+  document.getElementById('cover-file').onchange = async (e) => {
+    const f = e.target.files[0];
+    if(!f) return;
+    setBusy(true, 'Traitement de la photo…');
+    try{
+      const {full, thumb} = await readForCover(f);
+      CURRENT.coverImage = full;
+      CURRENT.coverThumb = thumb;
+      await persistMeta();
+      render();
+    }catch(err){ showError(err.message || "Impossible d'utiliser cette photo."); }
+    finally { setBusy(false); }
+  };
+}
+
+function renderIntroTab(body){
+  body.innerHTML = `
+    <div class="field">
+      <label>Texte d'introduction</label>
+      <textarea id="intro-text" placeholder="Racontez le contexte de ce voyage…">${escapeHtml(CURRENT.intro || '')}</textarea>
+    </div>
+  `;
+  const ta = document.getElementById('intro-text');
+  ta.oninput = debounce(async () => {
+    CURRENT.intro = ta.value;
+    try{ await persistMeta(); }catch(e){ showError(e.message); }
+  }, 400);
+}
+
+function renderPagesTab(body){
+  const rows = CURRENT.pages.map((p, i) => `
+    <div class="page-row" data-open-page="${p.id}">
+      <div class="num">${String(i+1).padStart(2,'0')}</div>
+      <div class="thumb-sm" style="${p.image ? `background-image:url('${p.image}')` : 'background:var(--paper-2)'}"></div>
+      <div class="lbl">${escapeHtml(p.label || 'Page sans titre')}</div>
+      <div class="ops">
+        <button class="iconbtn" data-up="${p.id}" ${i===0?'disabled style="opacity:.25"':''}>↑</button>
+        <button class="iconbtn" data-down="${p.id}" ${i===CURRENT.pages.length-1?'disabled style="opacity:.25"':''}>↓</button>
+        <button class="iconbtn" data-del-page="${p.id}">✕</button>
+      </div>
+    </div>
+  `).join('');
+
+  body.innerHTML = `
+    ${rows}
+    <button class="add-page-btn" id="add-page">+ Ajouter une page</button>
+  `;
+
+  root.querySelectorAll('[data-open-page]').forEach(el => {
+    el.onclick = (e) => {
+      if(e.target.closest('[data-up],[data-down],[data-del-page]')) return;
+      EDITING_PAGE_ID = el.getAttribute('data-open-page');
+      renderPageEditorOverlay();
+    };
+  });
+  root.querySelectorAll('[data-up]').forEach(el => el.onclick = (e) => { e.stopPropagation(); movePage(el.getAttribute('data-up'), -1); });
+  root.querySelectorAll('[data-down]').forEach(el => el.onclick = (e) => { e.stopPropagation(); movePage(el.getAttribute('data-down'), 1); });
+  root.querySelectorAll('[data-del-page]').forEach(el => el.onclick = async (e) => {
+    e.stopPropagation();
+    const id = el.getAttribute('data-del-page');
+    const p = CURRENT.pages.find(x => x.id === id);
+    if(confirm(`Supprimer « ${p.label || 'cette page'} » ?`)){
+      CURRENT.pages = CURRENT.pages.filter(x => x.id !== id);
+      try{
+        await persistMeta();
+        await deletePageData(CURRENT.id, id);
+      }catch(err){ showError(err.message); }
+      render();
+    }
+  });
+  document.getElementById('add-page').onclick = async () => {
+    const p = {id: uid(), label:'', image:null, text:''};
+    CURRENT.pages.push(p);
+    try{
+      await savePageData(CURRENT.id, p);
+      await persistMeta();
+    }catch(err){ showError(err.message); CURRENT.pages.pop(); return; }
+    EDITING_PAGE_ID = p.id;
+    renderPageEditorOverlay();
+  };
+}
+
+async function movePage(id, dir){
+  const i = CURRENT.pages.findIndex(p => p.id === id);
+  const j = i + dir;
+  if(j < 0 || j >= CURRENT.pages.length) return;
+  const tmp = CURRENT.pages[i];
+  CURRENT.pages[i] = CURRENT.pages[j];
+  CURRENT.pages[j] = tmp;
+  try{ await persistMeta(); }catch(err){ showError(err.message); }
+  render();
+}
+
+function renderPageEditorOverlay(){
+  const p = CURRENT.pages.find(x => x.id === EDITING_PAGE_ID);
+  if(!p) return;
+  const overlay = document.createElement('div');
+  overlay.className = 'page-editor-overlay';
+  overlay.innerHTML = `
+    <div class="topbar">
+      <button class="back" id="pe-close">← Retour</button>
+    </div>
+    <div class="tab-body">
+      <div class="field">
+        <label>Titre de la page (pour la vue d'ensemble)</label>
+        <input type="text" id="pe-label" value="${escapeAttr(p.label || '')}" placeholder="Jour 3 — Le fjord">
+      </div>
+      <div class="field">
+        <label>Photo</label>
+        <div class="image-picker" id="pe-pick">
+          ${p.image ? `<img src="${p.image}">` : `<div class="hint">Touchez pour choisir une photo</div>`}
+          <input type="file" accept="image/*" id="pe-file">
+          ${p.image ? `<div class="swap">Changer</div>` : ''}
+        </div>
+      </div>
+      <div class="field">
+        <label>Texte</label>
+        <textarea id="pe-text" placeholder="Racontez ce moment…">${escapeHtml(p.text || '')}</textarea>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  document.getElementById('pe-close').onclick = () => { overlay.remove(); render(); };
+  document.getElementById('pe-label').oninput = debounce(async (e) => {
+    p.label = e.target.value;
+    try{ await savePageData(CURRENT.id, p); }catch(err){ showError(err.message); }
+  }, 400);
+  document.getElementById('pe-text').oninput = debounce(async (e) => {
+    p.text = e.target.value;
+    try{ await savePageData(CURRENT.id, p); }catch(err){ showError(err.message); }
+  }, 400);
+  document.getElementById('pe-file').onchange = async (e) => {
+    const f = e.target.files[0];
+    if(!f) return;
+    setBusy(true, 'Traitement de la photo…');
+    try{
+      p.image = await readForContent(f);
+      await savePageData(CURRENT.id, p);
+      overlay.remove();
+      renderPageEditorOverlay();
+    }catch(err){ showError(err.message || "Impossible d'utiliser cette photo."); }
+    finally { setBusy(false); }
+  };
+}
+
+function renderOverviewTab(body){
+  const rows = [
+    `<div class="ov-row fixed"><div class="kind">Couv.</div><div class="lbl">${escapeHtml(CURRENT.coverTitle || 'Sans titre')}</div></div>`,
+    `<div class="ov-row fixed"><div class="kind">Intro</div><div class="lbl">Introduction</div></div>`,
+    ...CURRENT.pages.map((p,i) => `
+      <div class="ov-row">
+        <div class="kind">${String(i+1).padStart(2,'0')}</div>
+        <div class="lbl">${escapeHtml(p.label || 'Page sans titre')}</div>
+        <div class="ops">
+          <button class="iconbtn" data-up="${p.id}" ${i===0?'disabled style="opacity:.25"':''}>↑</button>
+          <button class="iconbtn" data-down="${p.id}" ${i===CURRENT.pages.length-1?'disabled style="opacity:.25"':''}>↓</button>
+        </div>
+      </div>
+    `)
+  ].join('');
+  body.innerHTML = rows;
+  root.querySelectorAll('[data-up]').forEach(el => el.onclick = () => movePage(el.getAttribute('data-up'), -1));
+  root.querySelectorAll('[data-down]').forEach(el => el.onclick = () => movePage(el.getAttribute('data-down'), 1));
+}
+
+/* ============ VIEWER (spread reading mode) ============ */
+function totalSpreads(){ return 2 + CURRENT.pages.length; }
+
+function openViewer(startIndex){
+  VIEWER_INDEX = startIndex || 0;
+  const overlay = document.createElement('div');
+  overlay.className = 'viewer';
+  overlay.id = 'viewer-overlay';
+  document.body.appendChild(overlay);
+  renderViewerContent();
+
+  let touchStartX = null;
+  overlay.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, {passive:true});
+  overlay.addEventListener('touchend', (e) => {
+    if(touchStartX === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if(dx < -40) viewerNav(1);
+    else if(dx > 40) viewerNav(-1);
+    touchStartX = null;
+  }, {passive:true});
+}
+
+function viewerNav(dir){
+  const n = VIEWER_INDEX + dir;
+  if(n < 0 || n >= totalSpreads()) return;
+  VIEWER_INDEX = n;
+  renderViewerContent();
+}
+
+function closeViewer(){
+  const el = document.getElementById('viewer-overlay');
+  if(el) el.remove();
+}
+
+function renderViewerContent(){
+  const overlay = document.getElementById('viewer-overlay');
+  if(!overlay) return;
+  overlay.innerHTML = `
+    <button class="close-viewer" id="v-close">✕</button>
+    <button class="vnav prev" id="v-prev" ${VIEWER_INDEX===0?'disabled':''}>‹</button>
+    <button class="vnav next" id="v-next" ${VIEWER_INDEX===totalSpreads()-1?'disabled':''}>›</button>
+    ${spreadHtml(VIEWER_INDEX)}
+    <div class="rotate-hint">Tournez votre iPhone en mode paysage pour voir la double page.</div>
+    <div class="counter">${VIEWER_INDEX+1} / ${totalSpreads()}</div>
+  `;
+  document.getElementById('v-close').onclick = closeViewer;
+  document.getElementById('v-prev').onclick = () => viewerNav(-1);
+  document.getElementById('v-next').onclick = () => viewerNav(1);
+}
+
+function spreadHtml(index){
+  if(index === 0){
+    // cover
+    const hasImg = !!CURRENT.coverImage;
+    return `
+      <div class="spread spread-cover">
+        <div class="page left ${hasImg?'has-img':''}" style="${hasImg?`background-image:url('${CURRENT.coverImage}')`:''}"></div>
+        <div class="page right">
+          <div class="eyebrow">Carnet de voyage</div>
+          <div class="cover-title">${escapeHtml(CURRENT.coverTitle || 'Sans titre')}</div>
+          <div class="rule"></div>
+        </div>
+      </div>
+    `;
+  }
+  if(index === 1){
+    return `
+      <div class="spread spread-intro">
+        <div class="page left"><div class="quote-mark">“</div></div>
+        <div class="page right">
+          <h2>Introduction</h2>
+          <div class="intro-text">${escapeHtml(CURRENT.intro || '')}</div>
+        </div>
+        <div class="folio">02</div>
+      </div>
+    `;
+  }
+  const p = CURRENT.pages[index - 2];
+  return `
+    <div class="spread spread-page">
+      <div class="page left ${p.image?'':'no-img'}" style="${p.image?`background-image:url('${p.image}')`:''}"></div>
+      <div class="page right">
+        <h2 class="content-h2">${String(index-1).padStart(2,'0')}</h2>
+        <div class="page-title">${escapeHtml(p.label || '')}</div>
+        <div class="page-text">${escapeHtml(p.text || '')}</div>
+      </div>
+      <div class="folio">${String(index+1).padStart(2,'0')}</div>
+    </div>
+  `;
+}
+
+/* ============ PDF EXPORT (print) ============ */
+function exportPdf(){
+  const hasImg = !!CURRENT.coverImage;
+  let html = `
+    <div class="pspread">
+      <div class="page left ${hasImg?'img':''}" style="${hasImg?`background-image:url('${CURRENT.coverImage}')`:''}"></div>
+      <div class="page right cover-wrap">
+        <div class="eyebrow">Carnet de voyage</div>
+        <div class="cover-title">${escapeHtml(CURRENT.coverTitle || 'Sans titre')}</div>
+      </div>
+    </div>
+    <div class="pspread">
+      <div class="page left"></div>
+      <div class="page right">
+        <div class="eyebrow" style="text-align:left; margin-bottom:10pt;">Introduction</div>
+        <div class="intro-text">${escapeHtml(CURRENT.intro || '')}</div>
+        <div class="folio">02</div>
+      </div>
+    </div>
+  `;
+  CURRENT.pages.forEach((p, i) => {
+    html += `
+      <div class="pspread">
+        <div class="page left ${p.image?'img':''}" style="${p.image?`background-image:url('${p.image}')`:''}"></div>
+        <div class="page right">
+          <div class="eyebrow" style="text-align:left; margin-bottom:8pt;">${String(i+1).padStart(2,'0')}</div>
+          <div class="page-title">${escapeHtml(p.label || '')}</div>
+          <div class="page-text">${escapeHtml(p.text || '')}</div>
+          <div class="folio">${String(i+3).padStart(2,'0')}</div>
+        </div>
+      </div>
+    `;
+  });
+  printRoot.innerHTML = html;
+  setTimeout(() => {
+    window.print();
+  }, 80);
+}
+
+/* ============ UTIL ============ */
+function escapeHtml(s){
+  return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function escapeAttr(s){ return escapeHtml(s); }
+function formatDate(ts){
+  if(!ts) return '';
+  const d = new Date(ts);
+  return d.toLocaleDateString('fr-FR', {day:'numeric', month:'short', year:'numeric'});
+}
+function debounce(fn, ms){
+  let t;
+  return (...args) => { clearTimeout(t); t = setTimeout(() => fn(...args), ms); };
+}
+function setBusy(b, message){
+  BUSY = b;
+  let el = document.getElementById('busy-overlay');
+  if(b){
+    if(!el){
+      el = document.createElement('div');
+      el.id = 'busy-overlay';
+      el.className = 'spinner-overlay';
+      el.style.background = 'rgba(220,210,184,0.85)';
+      document.body.appendChild(el);
+    }
+    el.textContent = message || 'Chargement…';
+  } else if(el){ el.remove(); }
+}
+
+/* ============ INIT ============ */
+async function init(){
+  if(!window.indexedDB){
+    root.innerHTML = `<div class="spinner-overlay">Le stockage n'est pas disponible dans ce navigateur.</div>`;
+    return;
+  }
+  try{
+    await openDB();
+  }catch(e){
+    root.innerHTML = `<div class="spinner-overlay">Impossible d'accéder au stockage local sur cet appareil.</div>`;
+    return;
+  }
+  await loadIndex();
+  VIEW = 'library';
+  render();
+
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('sw.js').catch(() => { /* offline caching unavailable, app still works online */ });
+  }
+}
+init();
+
+})();
+</script>
+</body>
+</html>
