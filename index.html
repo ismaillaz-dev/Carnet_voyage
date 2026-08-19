@@ -26,6 +26,11 @@
   --serif: "New York", ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
   --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
   --mono: "SF Mono", ui-monospace, Menlo, monospace;
+  --manuscrit: "Snell Roundhand", "Bradley Hand", cursive;
+  --typewriter: "American Typewriter", "Courier New", monospace;
+  /* Réglages personnalisables des titres (surchargés via JS depuis les préférences) */
+  --title-font: var(--serif);
+  --title-scale: 1;
 }
 *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
 html,body{height:100%;}
@@ -78,7 +83,7 @@ button{font-family:var(--sans); -webkit-user-select:none; user-select:none;}
   font-family:var(--mono); font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
   color:var(--gold); margin:0 0 6px;
 }
-.library-head h1{font-family:var(--serif); font-size:34px; margin:0; font-weight:600;}
+.library-head h1{font-family:var(--title-font); font-size:calc(34px * var(--title-scale)); margin:0; font-weight:600;}
 .grid{
   display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:22px; margin-top:28px;
 }
@@ -96,7 +101,7 @@ button{font-family:var(--sans); -webkit-user-select:none; user-select:none;}
   content:"—"; margin:auto; color:var(--ink-faint); font-family:var(--serif); font-size:28px;
 }
 .card .info{padding:12px 14px 14px;}
-.card .info .title{font-family:var(--serif); font-size:16px; font-weight:600; line-height:1.25;}
+.card .info .title{font-family:var(--title-font); font-size:calc(16px * var(--title-scale)); font-weight:600; line-height:1.25;}
 .card .info .meta{font-family:var(--mono); font-size:10px; color:var(--ink-soft); margin-top:5px; letter-spacing:0.04em;}
 .card .del{
   position:absolute; top:8px; right:8px; width:26px; height:26px; border-radius:50%;
@@ -180,6 +185,41 @@ button{font-family:var(--sans); -webkit-user-select:none; user-select:none;}
   position:fixed; inset:0; background:var(--paper-deep); z-index:40; display:flex; flex-direction:column;
 }
 
+/* ---------- Settings ---------- */
+.settings-overlay{
+  position:fixed; inset:0; background:var(--paper-deep); z-index:45; display:flex; flex-direction:column; overflow-y:auto;
+}
+.settings-section{margin-bottom:32px;}
+.settings-section .st-label{
+  font-family:var(--mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+  color:var(--ink-soft); margin-bottom:12px; display:block;
+}
+.font-options{display:flex; flex-direction:column; gap:10px;}
+.font-option{
+  display:flex; align-items:center; justify-content:space-between; gap:12px;
+  padding:16px 18px; background:var(--paper); border:1px solid var(--line); cursor:pointer;
+}
+.font-option.selected{border-color:var(--gold); box-shadow:inset 0 0 0 1px var(--gold);}
+.font-option .fo-name{font-family:var(--mono); font-size:10px; letter-spacing:0.07em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:4px;}
+.font-option .fo-preview{font-size:22px; line-height:1.2; color:var(--ink);}
+.font-option .fo-check{width:20px; height:20px; border-radius:50%; border:1px solid var(--ink-faint); flex-shrink:0; position:relative;}
+.font-option.selected .fo-check{background:var(--gold); border-color:var(--gold);}
+.font-option.selected .fo-check::after{
+  content:""; position:absolute; inset:0; margin:auto; width:6px; height:6px; border-radius:50%; background:var(--paper);
+}
+.size-options{display:flex; gap:8px;}
+.size-option{
+  flex:1; padding:14px 6px; background:var(--paper); border:1px solid var(--line); cursor:pointer; text-align:center;
+}
+.size-option.selected{border-color:var(--gold); box-shadow:inset 0 0 0 1px var(--gold);}
+.size-option .so-label{font-family:var(--mono); font-size:9px; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-soft); margin-top:6px;}
+.size-option .so-glyph{font-family:var(--title-font); color:var(--ink);}
+.settings-preview{
+  padding:26px 20px; background:var(--paper); border:1px solid var(--line); text-align:center; margin-bottom:32px;
+}
+.settings-preview .sp-eyebrow{font-family:var(--mono); font-size:10px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); margin-bottom:10px;}
+.settings-preview .sp-title{font-family:var(--title-font); font-size:calc(28px * var(--title-scale)); font-weight:600; color:var(--ink);}
+
 /* ---------- Spread viewer ---------- */
 .viewer{
   position:fixed; inset:0; background:#161510; z-index:50; display:flex; flex-direction:column; align-items:center; justify-content:center;
@@ -233,7 +273,7 @@ button{font-family:var(--sans); -webkit-user-select:none; user-select:none;}
 .spread-cover .page.left.has-img{background-color:var(--ink);}
 .spread-cover .page.right{align-items:center; justify-content:center; text-align:center;}
 .spread-cover .eyebrow{font-family:var(--mono); font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-bottom:14px;}
-.spread-cover .cover-title{font-family:var(--serif); font-size:clamp(22px,3.4vw,40px); font-weight:600; line-height:1.15;}
+.spread-cover .cover-title{font-family:var(--title-font); font-size:calc(clamp(22px,3.4vw,40px) * var(--title-scale)); font-weight:600; line-height:1.15;}
 .spread-cover .rule{width:40px; height:1px; background:var(--ink-faint); margin:18px auto;}
 
 .spread-intro .page.left{
@@ -253,7 +293,7 @@ button{font-family:var(--sans); -webkit-user-select:none; user-select:none;}
 .spread-page .page.left.no-img{display:flex; align-items:center; justify-content:center;}
 .spread-page .page.left.no-img::after{content:"—"; font-family:var(--serif); color:var(--ink-faint); font-size:30px;}
 .spread-page .page.right{justify-content:flex-start;}
-.spread-page .page-title{font-family:var(--serif); font-size:clamp(16px,2vw,22px); font-weight:600; margin:0 0 12px;}
+.spread-page .page-title{font-family:var(--title-font); font-size:calc(clamp(16px,2vw,22px) * var(--title-scale)); font-weight:600; margin:0 0 12px;}
 
 @media (max-width:680px) and (orientation:portrait){
   .spread{display:none;}
@@ -288,9 +328,9 @@ button{font-family:var(--sans); -webkit-user-select:none; user-select:none;}
   #print-root .page{flex:1; position:relative; padding:14mm 16mm; overflow:hidden;}
   #print-root .page.left{background:var(--paper-2);}
   #print-root .page.left.img{background-size:cover; background-position:center;}
-  #print-root .cover-title{font-family:var(--serif); font-size:30pt; text-align:center; margin:auto;}
+  #print-root .cover-title{font-family:var(--title-font); font-size:calc(30pt * var(--title-scale)); text-align:center; margin:auto;}
   #print-root .eyebrow{font-family:var(--mono); font-size:9pt; letter-spacing:0.14em; text-align:center; color:var(--gold); text-transform:uppercase;}
-  #print-root .page-title{font-family:var(--serif); font-size:16pt; font-weight:600; margin:0 0 8pt;}
+  #print-root .page-title{font-family:var(--title-font); font-size:calc(16pt * var(--title-scale)); font-weight:600; margin:0 0 8pt;}
   #print-root .page-text, #print-root .intro-text{font-family:var(--serif); font-size:11pt; line-height:1.7; white-space:pre-wrap;}
   #print-root .cover-wrap{display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%;}
   #print-root .folio{position:absolute; bottom:8mm; font-family:var(--mono); font-size:8pt; color:var(--ink-faint);}
@@ -522,7 +562,10 @@ function renderLibrary(){
   root.innerHTML = `
     <div class="topbar">
       <h1>Carnets de voyage</h1>
-      <button class="btn" id="btn-new">+ Nouveau</button>
+      <div style="display:flex; gap:8px;">
+        <button class="btn ghost small" id="btn-settings" title="Réglages">Réglages</button>
+        <button class="btn" id="btn-new">+ Nouveau</button>
+      </div>
     </div>
     <div class="library">
       ${INDEX.length === 0 ? `
@@ -535,6 +578,7 @@ function renderLibrary(){
     </div>
   `;
 
+  document.getElementById('btn-settings').onclick = renderSettingsOverlay;
   document.getElementById('btn-new').onclick = createNewCarnet;
   document.getElementById('new-card').onclick = createNewCarnet;
   root.querySelectorAll('[data-open]').forEach(el => {
@@ -980,6 +1024,95 @@ function setBusy(b, message){
   } else if(el){ el.remove(); }
 }
 
+/* ============ SETTINGS ============ */
+const FONT_CHOICES = [
+  {id:'serif', name:'Élégant', stack:'var(--serif)'},
+  {id:'manuscrit', name:'Manuscrit', stack:'var(--manuscrit)'},
+  {id:'typewriter', name:'Machine à écrire', stack:'var(--typewriter)'},
+  {id:'sans', name:'Moderne', stack:'var(--sans)'}
+];
+const SIZE_CHOICES = [
+  {id:'s', name:'Petit', scale:0.85},
+  {id:'m', name:'Moyen', scale:1},
+  {id:'l', name:'Grand', scale:1.2},
+  {id:'xl', name:'Très grand', scale:1.4}
+];
+let SETTINGS = {font:'serif', size:'m'};
+
+async function loadSettings(){
+  const s = await storageGet('app-settings');
+  SETTINGS = {font:'serif', size:'m', ...(s || {})};
+}
+async function saveSettings(){
+  try{ await storageSet('app-settings', SETTINGS); }catch(e){ showError(e.message); }
+}
+function applySettings(){
+  const font = FONT_CHOICES.find(f => f.id === SETTINGS.font) || FONT_CHOICES[0];
+  const size = SIZE_CHOICES.find(s => s.id === SETTINGS.size) || SIZE_CHOICES[1];
+  document.documentElement.style.setProperty('--title-font', font.stack);
+  document.documentElement.style.setProperty('--title-scale', size.scale);
+}
+
+function renderSettingsOverlay(){
+  const overlay = document.createElement('div');
+  overlay.className = 'settings-overlay';
+  overlay.innerHTML = `
+    <div class="topbar">
+      <button class="back" id="st-close">← Retour</button>
+    </div>
+    <div class="tab-body">
+      <div class="settings-preview">
+        <div class="sp-eyebrow">Aperçu</div>
+        <div class="sp-title">Un été en Islande</div>
+      </div>
+      <div class="settings-section">
+        <span class="st-label">Police des titres</span>
+        <div class="font-options" id="font-options">
+          ${FONT_CHOICES.map(f => `
+            <div class="font-option ${SETTINGS.font===f.id?'selected':''}" data-font="${f.id}">
+              <div>
+                <div class="fo-name">${f.name}</div>
+                <div class="fo-preview" style="font-family:${f.stack}">Un été en Islande</div>
+              </div>
+              <div class="fo-check"></div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+      <div class="settings-section">
+        <span class="st-label">Taille des titres</span>
+        <div class="size-options" id="size-options">
+          ${SIZE_CHOICES.map(s => `
+            <div class="size-option ${SETTINGS.size===s.id?'selected':''}" data-size="${s.id}">
+              <div class="so-glyph" style="font-size:${18*s.scale}px">Aa</div>
+              <div class="so-label">${s.name}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+
+  document.getElementById('st-close').onclick = () => overlay.remove();
+  overlay.querySelectorAll('[data-font]').forEach(el => {
+    el.onclick = async () => {
+      SETTINGS.font = el.getAttribute('data-font');
+      applySettings();
+      await saveSettings();
+      overlay.querySelectorAll('[data-font]').forEach(x => x.classList.toggle('selected', x === el));
+    };
+  });
+  overlay.querySelectorAll('[data-size]').forEach(el => {
+    el.onclick = async () => {
+      SETTINGS.size = el.getAttribute('data-size');
+      applySettings();
+      await saveSettings();
+      overlay.querySelectorAll('[data-size]').forEach(x => x.classList.toggle('selected', x === el));
+    };
+  });
+}
+
 /* ============ INIT ============ */
 async function init(){
   if(!window.indexedDB){
@@ -993,6 +1126,8 @@ async function init(){
     return;
   }
   await loadIndex();
+  await loadSettings();
+  applySettings();
   VIEW = 'library';
   render();
 
